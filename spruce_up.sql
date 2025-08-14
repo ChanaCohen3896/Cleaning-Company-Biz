@@ -4,11 +4,11 @@ IF OBJECT_ID('dbo.SpruceCustomers','U') IS NOT NULL
 
 CREATE TABLE dbo.SpruceCustomers(
     CustomerID INT IDENTITY(1,1) CONSTRAINT c_SpruceCustomers_CustomerID_primarykey PRIMARY KEY,
-    FirstName NVARCHAR(50) NOT NULL CONSTRAINT c_SpruceCustomers_FirstName_not_blank CHECK (FirstName <> ' '),
-    LastName NVARCHAR(50) NOT NULL CONSTRAINT c_SpruceCustomers_LastName_not_blank CHECK (LastName <> ' '),
-    Phone NVARCHAR(20) NOT NULL CONSTRAINT c_SpruceCustomers_Phone_not_blank CHECK (Phone <> ' '),
-    Address NVARCHAR(100) NOT NULL CONSTRAINT c_SpruceCustomers_Address_not_blank CHECK (Address <> ' '),
-    Frequency NVARCHAR(10) NOT NULL CONSTRAINT c_SpruceCustomers_Frequency_not_blank CHECK (Frequency <> ' '),
+    FirstName NVARCHAR(50) NOT NULL CONSTRAINT c_SpruceCustomers_FirstName_not_blank CHECK (FirstName <> ''),
+    LastName NVARCHAR(50) NOT NULL CONSTRAINT c_SpruceCustomers_LastName_not_blank CHECK (LastName <> ''),
+    Phone NVARCHAR(20) NOT NULL CONSTRAINT c_SpruceCustomers_Phone_not_blank CHECK (Phone <> ''),
+    Address NVARCHAR(100) NOT NULL CONSTRAINT c_SpruceCustomers_Address_not_blank CHECK (Address <> ''),
+    Frequency NVARCHAR(10) NOT NULL CONSTRAINT c_SpruceCustomers_Frequency_not_blank CHECK (Frequency <> ''),
     PricePerHour DECIMAL(5,2) NOT NULL,
     Hours DECIMAL(4,1) NOT NULL,
     StartDate DATE NOT NULL,
